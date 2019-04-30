@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="author" content="colorlib.com">
+		<meta name="author" content="Jean Moraes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form</title>
+    <title>Checklist Pré Embarque</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -20,92 +20,130 @@
     <div class="main">
 
         <div class="container">
-            <h2>Sign up to great new account </h2>
+            <h2>Preencha o Formulário Abaixo </h2>
             <form method="POST" id="signup-form" class="signup-form">
                 <h3>
-                    <span class="title_text">Account Infomation</span>
+                    <span class="title_text">Identificação</span>
                 </h3>
                 <fieldset>
                     <div class="fieldset-content">
+                    <div class="form-group">
+                            <label for="foto" class="form-label">Escolha uma foto</label>
+                            <div class="form-file">
+                                <input type="file" name="foto" id="foto" class="custom-file-input" />
+                                <span id='val'></span>
+                                <span id='button'>Buscar</span>
+                            </div>
+                        </div>
                         <div class="form-group">
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" name="username" id="username" placeholder="User Name" />
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" name="nome" id="nome" placeholder="Nome Completo" />
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" name="telefone" id="telefone" placeholder="(ddd) _____-____" />
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Your Email" />
-                        </div>
-                        <div class="form-group form-password">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" name="password" id="password" data-indicator="pwindicator" />
-                            <div id="pwindicator">
-                                <div class="bar-strength">
-                                    <div class="bar-process">
-                                        <div class="bar"></div>
-                                    </div>
-                                </div>
-                                <div class="label"></div>
-                            </div>
+                            <input type="email" name="email" id="email" placeholder="Email" />
                         </div>
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Select avatar</label>
-                            <div class="form-file">
-                                <input type="file" name="your_avatar" id="your_avatar" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" name="cpf" id="cpf" placeholder="___.___.___-__" />
+                        </div>
+                        <div class="form-group">
+                            <label for="funcao" class="form-label">Função</label>
+                            <input type="text" name="funcao" id="funcao" placeholder="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="funcao" class="form-label">Data do Embarque ou início do serviço</label>
+                            <input type="text" name="funcao" id="funcao" placeholder="" />
                         </div>
                     </div>
                     <div class="fieldset-footer">
-                        <span>Step 1 of 3</span>
+                        <span>Etapa 1 de 3</span>
                     </div>
                 </fieldset>
 
                 <h3>
-                    <span class="title_text">Personal Information</span>
+                    <span class="title_text">Informações de Saúde</span>
                 </h3>
                 <fieldset>
 
                     <div class="fieldset-content">
+                        
                         <div class="form-group">
-                            <label for="full_name" class="form-label">Full name</label>
-                            <input type="text" name="full_name" id="full_name" placeholder="Full Name" />
+                            <label for="peso" class="form-label">Peso</label>
+                            <input type="text" name="peso" id="peso" placeholder="Peso em Kg" />
                         </div>
-    
+
+                        <div class="form-group">
+                            <label for="altura" class="form-label">Altura</label>
+                            <input type="text" name="altura" id="altura" placeholder="Altura em m" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pressao" class="form-label">Pressão</label>
+                            <input type="text" name="pressao" id="pressao" placeholder="Aferir até um dia antes de preencher" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="glicose" class="form-label">Glicose</label>
+                            <input type="text" name="glicose" id="glicose" placeholder="Última avaliacao" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="temperatura" class="form-label">Temperatura Corporal</label>
+                            <input type="text" name="temperatura" id="temperatura" placeholder="Medida em Celsius (ºC)" />
+                        </div>
+
                         <div class="form-select">
-                            <label for="country" class="form-label">Country</label>
-                            <select name="country" id="country">
-                                <option value="">Country</option>
-                                <option value="Australia">Australia</option>
-                                <option value="USA">America</option>
+                            <label for="estressado" class="form-label">Estressado</label>
+                            <select name="estressado" id="estressado">
+                                <option value="">Escolha uma opção</option>
+                                <option value="nao">Não</option>
+                                <option value="sim">Sim</option>
+                            </select>
+                        </div>
+
+                        <div class="form-select">
+                            <label for="triste" class="form-label">Triste</label>
+                            <select name="triste" id="triste">
+                                <option value="">Escolha uma opção</option>
+                                <option value="nao">Não</option>
+                                <option value="sim">Sim</option>
+                            </select>
+                        </div>
+
+                        <div class="form-select">
+                            <label for="dor_dente" class="form-label">Dor de Dente?</label>
+                            <select name="dor_dente" id="dor_dente">
+                                <option value="">Escolha uma opção</option>
+                                <option value="nao">Não</option>
+                                <option value="sim">Sim</option>
+                            </select>
+                        </div>
+
+                        <div class="form-select">
+                            <label for="dor_cabeca" class="form-label">Dor de Cabeça?</label>
+                            <select name="dor_cabeca" id="dor_cabeca">
+                                <option value="">Escolha uma opção</option>
+                                <option value="nao">Não</option>
+                                <option value="sim">Sim</option>
                             </select>
                         </div>
     
-                        <div class="form-radio">
-                            <label for="gender" class="form-label">Gender</label>
-                            <div class="form-radio-item">
-                                <input type="radio" name="gender" value="male" id="male" checked="checked" />
-                                <label for="male">Male</label>
-    
-                                <input type="radio" name="gender" value="female" id="female" />
-                                <label for="female">Female</label>
-                            </div>
-                        </div>
-    
-                        <div class="form-textarea">
-                            <label for="about_us" class="form-label">About us</label>
-                            <textarea name="about_us" id="about_us" placeholder="Who are you ..."></textarea>
-                        </div>
+                        
                     </div>
 
                     <div class="fieldset-footer">
-                        <span>Step 2 of 3</span>
+                        <span>Etapa 2 de 3</span>
                     </div>
 
                 </fieldset>
 
                 <h3>
-                    <span class="title_text">Payment Details</span>
+                    <span class="title_text">Informações de Saúde</span>
                 </h3>
                 <fieldset>
                     <div class="fieldset-content">
@@ -152,7 +190,7 @@
                     </div>
 
                     <div class="fieldset-footer">
-                        <span>Step 3 of 3</span>
+                        <span>Etapa 3 de 3</span>
                     </div>
                 </fieldset>
             </form>
