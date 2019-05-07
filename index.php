@@ -21,7 +21,7 @@
 
         <div class="container">
             <h2>Preencha o Formulário Abaixo </h2>
-            <form method="POST" id="signup-form" class="signup-form">
+            <form method="POST" id="signup-form" class="signup-form" action="resultado.php">
                 <h3>
                     <span class="title_text">Identificação</span>
                 </h3>
@@ -56,8 +56,8 @@
                             <input type="text" name="funcao" id="funcao" placeholder="" />
                         </div>
                         <div class="form-group">
-                            <label for="funcao" class="form-label">Data do Embarque ou início do serviço</label>
-                            <input type="text" name="funcao" id="funcao" placeholder="" />
+                            <label for="data" class="form-label">Data do Embarque ou início do serviço</label>
+                            <input type="date" name="data" id="data" placeholder="" />
                         </div>
                     </div>
                     <div class="fieldset-footer">
@@ -166,8 +166,8 @@
                     </div>
 
                     <div class="form-select">
-                        <label for="conjuntivite" class="form-label">Está com ferida ou escoriação no corpo</label>
-                        <select name="conjuntivite" id="conjuntivite">
+                        <label for="escoliacao" class="form-label">Está com ferida ou escoriação no corpo</label>
+                        <select name="escoliacao" id="escoliacao">
                             <option value="">Escolha uma opção</option>
                             <option value="nao">Não</option>
                             <option value="sim">Sim</option>
@@ -202,8 +202,8 @@
                     </div>
 
                     <div class="form-select">
-                        <label for="bebida" class="form-label">Ingeriu bebida alcóolica nas últimas 24 horas antes do serviço ou do embarque?</label>
-                        <select name="bebida" id="bebida">
+                        <label for="alcool" class="form-label">Ingeriu bebida alcóolica nas últimas 24 horas antes do serviço ou do embarque?</label>
+                        <select name="alcool" id="alcool">
                             <option value="">Escolha uma opção</option>
                             <option value="nao">Não</option>
                             <option value="sim">Sim</option>
