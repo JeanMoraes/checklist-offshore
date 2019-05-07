@@ -132,8 +132,7 @@
                                 <option value="sim">Sim</option>
                             </select>
                         </div>
-    
-                        
+     
                     </div>
 
                     <div class="fieldset-footer">
@@ -147,46 +146,88 @@
                 </h3>
                 <fieldset>
                     <div class="fieldset-content">
-                        <div class="form-radio">
-                            <label for="payment_type">Payment Type</label>
-                            <div class="form-radio-flex">
-                                <input type="radio" name="payment_type" id="payment_visa" value="payment_visa" checked="checked" />
-                                <label for="payment_visa"><img src="images/icon-visa.png" alt=""></label>
-    
-                                <input type="radio" name="payment_type" id="payment_master" value="payment_master" />
-                                <label for="payment_master"><img src="images/icon-master.png" alt=""></label>
-    
-                                <input type="radio" name="payment_type" id="payment_paypal" value="payment_paypal" />
-                                <label for="payment_paypal"><img src="images/icon-paypal.png" alt=""></label>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="credit_card" class="form-label">Credit Card</label>
-                                <input type="text" name="credit_card" id="credit_card" />
-                            </div>
-                            <div class="form-group">
-                                <label for="cvc" class="form-label">CVC</label>
-                                <input type="text" name="cvc" id="cvc" />
-                            </div>
-                        </div>
-                        <div class="form-date">
-                            <label for="expiry_date">Expiration Date</label>
-                            <div class="form-flex">
-                                <div class="form-date-item">
-                                    <select id="expiry_date" name="expiry_date"></select>
-                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
-                                </div>
-                                <div class="form-date-item">
-                                    <select id="expiry_year" name="expiry_year"></select>
-                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="name_of_card" class="form-label">Name of card</label>
-                            <input type="text" name="name_of_card" id="name_of_card" />
-                        </div>
+
+                    <div class="form-select">
+                            <label for="dor_corpo" class="form-label">Dor em alguma parte do corpo?</label>
+                            <select name="dor_corpo" id="dor_corpo">
+                                <option value="">Escolha uma opção</option>
+                                <option value="nao">Não</option>
+                                <option value="sim">Sim</option>
+                            </select>
+                    </div>
+
+                    <div class="form-select">
+                        <label for="conjuntivite" class="form-label">Conjuntivite</label>
+                        <select name="conjuntivite" id="conjuntivite">
+                            <option value="">Escolha uma opção</option>
+                            <option value="nao">Não</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
+
+                    <div class="form-select">
+                        <label for="conjuntivite" class="form-label">Está com ferida ou escoriação no corpo</label>
+                        <select name="conjuntivite" id="conjuntivite">
+                            <option value="">Escolha uma opção</option>
+                            <option value="nao">Não</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
+
+                    <div class="form-select">
+                        <label for="tratamento" class="form-label">Algum tipo de tratamento em andamento (físico, emocional ou saúde)</label>
+                        <select name="tratamento" id="tratamento">
+                            <option value="">Escolha uma opção</option>
+                            <option value="nao">Não</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
+                        
+                    <div class="form-select">
+                        <label for="antibio" class="form-label">Está tomando antinflamatório ou antibiótico?</label>
+                        <select name="antibio" id="antibio">
+                            <option value="">Escolha uma opção</option>
+                            <option value="nao">Não</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
+
+                    <div class="form-select">
+                        <label for="tarjapreta" class="form-label">Está tomando algum medicamento tarja preta?</label>
+                        <select name="tarjapreta" id="tarjapreta">
+                            <option value="">Escolha uma opção</option>
+                            <option value="nao">Não</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
+
+                    <div class="form-select">
+                        <label for="bebida" class="form-label">Ingeriu bebida alcóolica nas últimas 24 horas antes do serviço ou do embarque?</label>
+                        <select name="bebida" id="bebida">
+                            <option value="">Escolha uma opção</option>
+                            <option value="nao">Não</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
+
+                    <div class="form-select">
+                        <label for="drogas" class="form-label">Faz uso de drogas ilícitas?</label>
+                        <select name="drogas" id="drogas">
+                            <option value="">Escolha uma opção</option>
+                            <option value="nao">Não</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
+
+                    <div class="form-select">
+                        <label for="atendimento" class="form-label">Passou por algum atendimento médico nos últimos 30 dias?</label>
+                        <select name="atendimento" id="atendimento">
+                            <option value="">Escolha uma opção</option>
+                            <option value="nao">Não</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
+                    
                     </div>
 
                     <div class="fieldset-footer">
