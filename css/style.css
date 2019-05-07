@@ -129,6 +129,7 @@ body {
 
 .container {
   width: 850px;
+  height: auto;
   position: relative;
   margin: 0 auto;
   background: #fff;
@@ -702,7 +703,7 @@ fieldset {
 
   .fieldset-content {
     padding-right: 0px;
-    height: 600px; }
+    height: auto; }
 
   .form-group, .form-select, .form-radio, .form-textarea, .form-date {
     flex-direction: column;
@@ -760,6 +761,6 @@ fieldset {
     margin-bottom: 10px; }
 
   .fieldset-content {
-    height: 750px; } }
+    height: auto; } }
 
 /*# sourceMappingURL=style.css.map */
