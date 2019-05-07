@@ -85,16 +85,34 @@
                         <div class="form-group">
                             <label for="pressao" class="form-label">Pressão</label>
                             <input type="text" name="pressao" id="pressao" placeholder="Aferir até um dia antes de preencher" />
+                            <select name="nivel_pressao" id="nivel_pressao" class="input-menor">
+                                <option value="">Nível</option>
+                                <option value="baixa">Baixa</option>
+                                <option value="normal">Normal</option>
+                                <option value="alta">Alta</option>
+                            </select>
                         </div>
 
                         <div class="form-group">
                             <label for="glicose" class="form-label">Glicose</label>
                             <input type="text" name="glicose" id="glicose" placeholder="Última avaliacao" />
+                            <select name="nivel_glicose" id="nivel_glicose" class="input-menor">
+                                <option value="">Nível</option>    
+                                <option value="baixa">Baixa</option>
+                                <option value="normal">Normal</option>
+                                <option value="alta">Alta</option>
+                            </select>
                         </div>
 
                         <div class="form-group">
                             <label for="temperatura" class="form-label">Temperatura Corporal</label>
                             <input type="text" name="temperatura" id="temperatura" placeholder="Medida em Celsius (ºC)" />
+                            <select name="nivel_temperatura" id="nivel_temperatura" class="input-menor">
+                                <option value="">Nível</option>
+                                <option value="baixa">Baixa</option>
+                                <option value="normal">Normal</option>
+                                <option value="alta">Alta</option>
+                            </select>
                         </div>
 
                         <div class="form-select">
@@ -166,8 +184,8 @@
                     </div>
 
                     <div class="form-select">
-                        <label for="escoliacao" class="form-label">Está com ferida ou escoriação no corpo</label>
-                        <select name="escoliacao" id="escoliacao">
+                        <label for="escoriacao" class="form-label">Está com ferida ou escoriação no corpo</label>
+                        <select name="escoriacao" id="escoriacao">
                             <option value="">Escolha uma opção</option>
                             <option value="nao">Não</option>
                             <option value="sim">Sim</option>

@@ -19,8 +19,11 @@
     $icm = floatval($peso / ($altura_num * $altura_num));
 
     $pressao = $_POST['pressao'];
+    $nivel_pressao = $_POST['nivel_pressao'];
     $glicose = $_POST['glicose'];
+    $nivel_glicose = $_POST['nivel_glicose'];
     $temperatura = $_POST['temperatura'];
+    $nivel_temperatura = $_POST['nivel_temperatura'];
 
     $estressado = $_POST['estressado'];
     $triste = $_POST['triste'];
@@ -28,7 +31,7 @@
     $dor_cabeca = $_POST['dor_cabeca'];
     $dor_corpo = $_POST['dor_corpo'];
     $conjuntivite = $_POST['conjuntivite'];
-    $escoliacao = $_POST['escoliacao'];
+    $escoriacao = $_POST['escoriacao'];
     $tratamento = $_POST['tratamento'];
     $antibio = $_POST['antibio'];
     $tarjapreta = $_POST['tarjapreta'];
@@ -60,7 +63,7 @@
             if($conjuntivite == "sim")
                 $sinal_amarelo = $sinal_amarelo + 1;
 
-            if($escoliacao == "sim")
+            if($escoriacao == "sim")
                 $sinal_amarelo = $sinal_amarelo + 1;
 
             if($tratamento == "sim")
@@ -118,9 +121,9 @@
 <p><strong>PESO: </strong><?php echo $peso; ?> (Kg)</p>
 <p><strong>ALTURA: </strong><?php echo $altura; ?> (m)</p>
 <p><strong>ICM: </strong><?php echo $icm; ?></p>
-<p><strong>Pressão: </strong><?php echo $pressao; ?></p>
-<p><strong>Glicose: </strong><?php echo $glicose; ?></p>
-<p><strong>Temperatura: </strong><?php echo $temperatura; ?></p>
+<p><strong>Pressão: </strong><?php echo "$pressao | $nivel_pressao"; ?></p>
+<p><strong>Glicose: </strong><?php echo "$glicose | $nivel_glicose"; ?></p>
+<p><strong>Temperatura: </strong><?php echo "$temperatura | $nivel_temperatura"; ?></p>
 
 <p><strong>Estressado: </strong><?php echo $estressado; ?></p>
 <p><strong>Triste: </strong><?php echo $triste; ?></p>
@@ -128,7 +131,7 @@
 <p><strong>Dor de Cabeça: </strong><?php echo $dor_cabeca; ?></p>
 <p><strong>Dor no Corpo: </strong><?php echo $dor_corpo; ?></p>
 <p><strong>Conjuntivite: </strong><?php echo $conjuntivite; ?></p>
-<p><strong>Escoliação: </strong><?php echo $escoliacao; ?></p>
+<p><strong>Escoriação: </strong><?php echo $escoriacao; ?></p>
 <p><strong>Tratamento em Andamento: </strong><?php echo $tratamento; ?></p>
 <p><strong>Antibiótico ou Antiinflamatório: </strong><?php echo $antibio; ?></p>
 <p><strong>Tarja Preta: </strong><?php echo $tarjapreta; ?></p>

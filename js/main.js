@@ -6,17 +6,54 @@
             element.before(error);
         },
         rules: {
-            username: {
-                required: true,
-            },
-            email: {
-                required: true,
-                email : true
-            }
+            nome: { required: true, },
+            telefone: { required: true, },
+            email: { required: true, email : true },
+            cpf: { required: true, },
+            funcao: { required: true, },
+            data: { required: true, },
+            peso: { required: true, },
+            altura: { required: true, },
+            pressao: { required: true, },
+            nivel_pressao: { required: true, },
+            glicose: { required: true, },
+            nivel_glicose: { required: true, },
+            temperatura: { required: true, },
+            nivel_temperatura: { required: true, },
+            estressado: { required: true, },       
+            triste: { required: true, },
+            dor_dente: { required: true, },
+            dor_cabeca: { required: true, },
+            dor_corpo: { required: true, },
+            conjuntivite: { required: true, },
+            escoriacao: { required: true, },
+            tratamento: { required: true, },
+            antibio: { required: true, },
+            tarjapreta: { required: true, },
+            alcool: { required: true, },
+            drogas: { required: true, },
+            atendimento: { required: true, }
         },
         messages : {
+            nivel_pressao: "Item Obrigatório",
+            nivel_glicose: "Item Obrigatório",
+            nivel_temperatura: "Item Obrigatório",
+            estressado: "Item Obrigatório",
+            triste: "Item Obrigatório",
+            dor_dente: "Item Obrigatório",
+            dor_cabeca: "Item Obrigatório",
+            dor_corpo: "Item Obrigatório",
+            conjuntivite: "Item Obrigatório",
+            escoriacao: "Item Obrigatório",
+            tratamento: "Item Obrigatório",
+            antibio: "Item Obrigatório",
+            tarjapreta: "Item Obrigatório",
+            alcool: "Item Obrigatório",
+            drogas: "Item Obrigatório",
+            atendimento: "Item Obrigatório",
+            estressado: "Item Obrigatório!",
             email: {
-                email: 'Not a valid email address <i class="zmdi zmdi-info"></i>'
+                email: 'Email Inválido <i class="zmdi zmdi-info"></i>'
             }
         },
         onfocusout: function(element) {

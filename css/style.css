@@ -97,6 +97,11 @@ input:-webkit-autofill {
   -ms-box-shadow: 0 0 0 30px transparent inset;
   background-color: transparent !important; }
 
+.input-menor{
+  width: 100px;
+  text-align: center;
+}
+
 .clear {
   clear: both; }
 
@@ -680,6 +685,11 @@ fieldset {
     margin-left: auto;
     margin-right: auto; }
 
+    .input-menor{
+      width: 100%;
+      text-align: left;
+    }
+
   .form-row .form-date, .form-row .form-select, .form-file, input, select, textarea, .form-textarea textarea, #signup-form-p-2 #credit_card, #signup-form-p-2 #cvc,
   #signup-form-p-2 .form-radio-flex, #signup-form-p-2 .form-flex, #signup-form-p-2 .form-group input, .form-row .form-group label {
     width: 100%; }
@@ -719,6 +729,11 @@ fieldset {
 
   .fieldset-footer {
     padding: 78px 0; }
+
+  .input-menor{
+      width: 100%;
+      text-align: left;
+    }
 
   .actions ul li a {
     width: 100px; }
