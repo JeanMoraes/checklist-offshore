@@ -165,7 +165,7 @@ label {
 
 label.error {
   position: absolute;
-  right: 92px;
+  right: 160px;
   /* display: block; */
   font-size: 11px;
   color: #ff0000; }
