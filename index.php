@@ -21,7 +21,7 @@
 
         <div class="container">
             <h2>Preencha o Formulário Abaixo </h2>
-            <form method="POST" id="signup-form" class="signup-form" action="resultado.php">
+            <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data" action="adm/functions/cadastrar-registro.php">
                 <h3>
                     <span class="title_text">Identificação</span>
                 </h3>
