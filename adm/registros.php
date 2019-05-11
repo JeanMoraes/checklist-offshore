@@ -59,7 +59,7 @@ $total = mysqli_num_rows($sql);
                           <td><?=$linha['telefone']?></td>
                           <td><?=$linha['data']?></td>
                           <td><?=$linha['status']?></td>
-                          <td><a href="javascript:;">Editar Registro</a></td>
+                          <td><?php echo "<a href='registro-detalhes.php?id=" . $linha['id'] . "'>Detalhes</a>"; ?></td>
                         </tr>
                         <?php
               }while($linha = mysqli_fetch_assoc($sql));
