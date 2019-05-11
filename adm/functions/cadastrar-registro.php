@@ -100,13 +100,13 @@ $status = " ";
        
         ##BASE DE CALCULO##
         if($sinal_vermelho > 0)
-            $status = "SINAL VERMELHO";
+            $status = "VERMELHO";
 
         if($sinal_amarelo >= 1 && $sinal_vermelho == 0)
-            $status = "SINAL AMARELO";
+            $status = "AMARELO";
 
         if($sinal_vermelho == 0 && $sinal_amarelo == 0)
-            $status = "SINAL VERDE";
+            $status = "VERDE";
 	
 // upload da foto
 if (!empty($foto["name"])) {
