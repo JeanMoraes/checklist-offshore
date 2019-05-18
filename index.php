@@ -40,6 +40,10 @@
                             <input type="text" name="nome" id="nome" placeholder="Nome Completo" />
                         </div>
                         <div class="form-group">
+                            <label for="data" class="form-label">Data de Nascimento</label>
+                            <input type="date" name="nascimento" id="data" placeholder="" />
+                        </div>
+                        <div class="form-group">
                             <label for="telefone" class="form-label">Telefone</label>
                             <input type="tel" name="telefone" id="telefone" placeholder="(ddd) _____-____" />
                         </div>
@@ -95,24 +99,12 @@
 
                         <div class="form-group">
                             <label for="glicose" class="form-label">Glicose</label>
-                            <input type="text" name="glicose" id="glicose" placeholder="Última avaliacao" />
-                            <select name="nivel_glicose" id="nivel_glicose" class="input-menor">
-                                <option value="">Nível</option>    
-                                <option value="baixa">Baixa</option>
-                                <option value="normal">Normal</option>
-                                <option value="alta">Alta</option>
-                            </select>
+                            <input type="number" name="glicose" placeholder="Última avaliacao">
                         </div>
 
                         <div class="form-group">
                             <label for="temperatura" class="form-label">Temperatura Corporal</label>
-                            <input type="text" name="temperatura" id="temperatura" placeholder="Medida em Celsius (ºC)" />
-                            <select name="nivel_temperatura" id="nivel_temperatura" class="input-menor">
-                                <option value="">Nível</option>
-                                <option value="baixa">Baixa</option>
-                                <option value="normal">Normal</option>
-                                <option value="alta">Alta</option>
-                            </select>
+                            <input type="number" name="temperatura" min="35" max="42" placeholder="Medida em Celsius (ºC)">
                         </div>
 
                         <div class="form-select">

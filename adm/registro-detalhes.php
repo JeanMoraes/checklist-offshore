@@ -34,30 +34,31 @@ $total = mysqli_num_rows($sql);
                             <h4 class="brief"><i><?=$linha['funcao']?></i></h4>
                             <div class="left col-xs-7">
                               <h2><?=$linha['nome']?></h2>
-                              <ul class="list-unstyled">
-                                <li><i class="fa fa-phone"></i> Telefone: <?=$linha['telefone']?></li>
-                                <li><i class="fa fa-envelope"></i> Email: <?=$linha['telefone']?></li>
-                                <li> CPF: <?=$linha['telefone']?></li>
-                                <li> Data do Embarque: <?=$linha['data']?></li>
-                                <li> Peso: <?=$linha['peso']?>Kg</li>
-                                <li> Altura: <?=$linha['altura']?>m</li>
-                                <li> ICM: <?=$linha['icm']?></li>
-                                <li> Pressão: <?=$linha['pressao']?> | <?=$linha['nivel_pressao']?></li>
-                                <li> Glicose: <?=$linha['glicose']?> | <?=$linha['nivel_glicose']?></li>
-                                <li> Temperatura: <?=$linha['temperatura']?>ºC | <?=$linha['nivel_temperatura']?></li>
-                                <li> Estressado: <?=$linha['estressado']?></li>
-                                <li> Triste: <?=$linha['triste']?></li>
-                                <li> Dor de Dente: <?=$linha['dor_dente']?></li>
-                                <li> Dor de Cabeça: <?=$linha['dor_cabeca']?></li>
-                                <li> Dor no Corpo: <?=$linha['dor_corpo']?></li>
-                                <li> Conjuntivite: <?=$linha['conjuntivite']?></li>
-                                <li> Escoriação: <?=$linha['escoriacao']?></li>
-                                <li> Tratamento em Andamento: <?=$linha['tratamento']?></li>
-                                <li> Antiótico ou Antiinflamatório: <?=$linha['antibio']?></li>
-                                <li> Remédio Tarja Preta: <?=$linha['tarjapreta']?></li>
-                                <li> Ingeriu Bebida Alcóolica: <?=$linha['alcool']?></li>
-                                <li> Drogas Ilícitas: <?=$linha['drogas']?></li>
-                                <li> Atendimento médico (últimos 30 dias): <?=$linha['atendimento']?></li>
+                              <ul class="lista-detalhes-registros">
+                                <li><i class="fa fa-calendar"></i> <strong> Data de Nascimento:</strong> <?=$linha['nascimento']?></li>
+                                <li><i class="fa fa-phone"></i> <strong> Telefone:</strong> <?=$linha['telefone']?></li>
+                                <li><i class="fa fa-envelope"></i> <strong> Email:</strong> <?=$linha['telefone']?></li>
+                                <li> <strong>CPF:</strong> <?=$linha['telefone']?></li>
+                                <li><i class="fa fa-calendar"></i> <strong>Data do Embarque:</strong> <?=$linha['data']?></li>
+                                <li> <strong>Peso:</strong> <?=$linha['peso']?>Kg</li>
+                                <li> <strong>Altura:</strong> <?=$linha['altura']?>m</li>
+                                <li> <strong>ICM:</strong> <?=$linha['icm']?></li>
+                                <li> <strong>Pressão:</strong> <?=$linha['pressao']?> | <?=$linha['nivel_pressao']?></li>
+                                <li> <strong>Glicose:</strong> <?=$linha['glicose']?> mg/dl</li>
+                                <li> <strong>Temperatura:</strong> <?=$linha['temperatura']?>ºC</li>
+                                <li> <strong>Estressado:</strong> <?=$linha['estressado']?></li>
+                                <li> <strong>Triste:</strong> <?=$linha['triste']?></li>
+                                <li> <strong>Dor de Dente:</strong> <?=$linha['dor_dente']?></li>
+                                <li> <strong>Dor de Cabeça:</strong> <?=$linha['dor_cabeca']?></li>
+                                <li> <strong>Dor no Corpo:</strong> <?=$linha['dor_corpo']?></li>
+                                <li> <strong>Conjuntivite:</strong> <?=$linha['conjuntivite']?></li>
+                                <li> <strong>Escoriação:</strong> <?=$linha['escoriacao']?></li>
+                                <li> <strong>Tratamento em Andamento:</strong> <?=$linha['tratamento']?></li>
+                                <li> <strong>Antiótico ou Antiinflamatório:</strong> <?=$linha['antibio']?></li>
+                                <li> <strong>Remédio Tarja Preta:</strong> <?=$linha['tarjapreta']?></li>
+                                <li> <strong>Ingeriu Bebida Alcóolica:</strong> <?=$linha['alcool']?></li>
+                                <li> <strong>Drogas Ilícitas:</strong> <?=$linha['drogas']?></li>
+                                <li> <strong>Atendimento médico (últimos 30 dias):</strong> <?=$linha['atendimento']?></li>
                               </ul>
                             </div>
                             <div class="right col-xs-5 text-center">
@@ -71,7 +72,7 @@ $total = mysqli_num_rows($sql);
                               </p>
                             </div>
                             <div class="col-xs-12 col-sm-6 emphasis">
-                              <button type="button" class="btn btn-primary btn-xs">
+                              <button type="button" class="btn btn-md <?=$linha['btn_class']?>">
                                 <i class="fa fa-user"> </i> Alterar Status (em breve)
                               </button>
                             </div>

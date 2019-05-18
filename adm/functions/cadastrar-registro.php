@@ -3,6 +3,7 @@
 require("../../config/conexao.php");
 
 $nome               = $_POST['nome'];
+$nascimento         = $_POST['nascimento'];
 $foto               = $_FILES["foto"];
 $telefone           = $_POST['telefone'];
 $email              = $_POST['email'];
@@ -24,9 +25,7 @@ $icm = floatval($peso / ($altura_num * $altura_num));
 $pressao            = $_POST['pressao'];
 $nivel_pressao      = $_POST['nivel_pressao'];
 $glicose            = $_POST['glicose'];
-$nivel_glicose      = $_POST['nivel_glicose'];
 $temperatura        = $_POST['temperatura'];
-$nivel_temperatura  = $_POST['nivel_temperatura'];
 $estressado         = $_POST['estressado'];
 $triste             = $_POST['triste'];
 $dor_dente          = $_POST['dor_dente'];
@@ -47,13 +46,15 @@ $sinal_amarelo = 0;
 $status = " ";
 
         #### DEFININDO O STATUS ####            
-        if($nivel_glicose == "baixa" || $nivel_glicose == "alta")
+        $glicoseFloat = floatval($glicose);
+        if($glicoseFloat < 70 || $glicoseFloat > 100)
             $sinal_amarelo = $sinal_amarelo + 1;
 
         if($nivel_pressao == "baixa" || $nivel_pressao == "alta")
             $sinal_amarelo = $sinal_amarelo + 1;
 
-        if($nivel_temperatura == "baixa" || $nivel_temperatura == "alta")
+        $temperaturaFloat = floatval($temperatura);
+        if($temperaturaFloat < 36 || $temperaturaFloat > 38)
             $sinal_amarelo = $sinal_amarelo + 1;
 
         if($estressado == "sim")
@@ -99,24 +100,30 @@ $status = " ";
             $sinal_vermelho = $sinal_vermelho + 1;
        
         ##BASE DE CALCULO##
-        if($sinal_vermelho > 0)
+        if($sinal_vermelho > 0){
             $status = "VERMELHO";
+            $btn_class = "btn_vermelho";   
+        }
 
-        if($sinal_amarelo >= 1 && $sinal_vermelho == 0)
+        if($sinal_amarelo >= 1 && $sinal_vermelho == 0){
             $status = "AMARELO";
+            $btn_class = "btn_amarelo";
+        }
 
-        if($sinal_vermelho == 0 && $sinal_amarelo == 0)
+        if($sinal_vermelho == 0 && $sinal_amarelo == 0){
             $status = "VERDE";
+            $btn_class = "btn_verde";   
+        }
 	
 // upload da foto
 if (!empty($foto["name"])) {
     
     // Largura máxima em pixels
-    $largura_foto = 500;
+    $largura_foto = 3000;
     // Altura máxima em pixels
-    $altura_foto = 500;
+    $altura_foto = 3000;
     // Tamanho máximo do arquivo em bytes
-    $tamanho = 200000;
+    $tamanho = 700000;
 
     $error = array();
 
@@ -159,7 +166,7 @@ if (!empty($foto["name"])) {
         move_uploaded_file($foto["tmp_name"], $caminho_imagem);
         
         // Insere os dados no banco
-        $sql = "INSERT INTO registros (`nome`, `foto`, `telefone`, `email`, `cpf`, `funcao`, `data`, `peso`, `altura`, `icm`, `pressao`, `nivel_pressao`, `glicose`, `nivel_glicose`, `temperatura`, `nivel_temperatura`, `estressado`, `triste`, `dor_dente`, `dor_cabeca`, `dor_corpo`, `conjuntivite`, `escoriacao`, `tratamento`, `antibio`, `tarjapreta`, `alcool`, `drogas`, `atendimento`, `status`) VALUES ('$nome', '$nome_imagem', '$telefone', '$email', '$cpf', '$funcao', '$data', '$peso', '$altura', '$icm', '$pressao', '$nivel_pressao', '$glicose', '$nivel_glicose', '$temperatura', '$nivel_temperatura', '$estressado', '$triste', '$dor_dente', '$dor_cabeca', '$dor_corpo', '$conjuntivite', '$escoriacao', '$tratamento', '$antibio', '$tarjapreta', '$alcool', '$drogas', '$atendimento', '$status')";
+    $sql = "INSERT INTO registros (`nome`, `nascimento`, `foto`, `telefone`, `email`, `cpf`, `funcao`, `data`, `peso`, `altura`, `icm`, `pressao`, `nivel_pressao`, `glicose`, `temperatura`, `estressado`, `triste`, `dor_dente`, `dor_cabeca`, `dor_corpo`, `conjuntivite`, `escoriacao`, `tratamento`, `antibio`, `tarjapreta`, `alcool`, `drogas`, `atendimento`, `status`, `btn_class`) VALUES ('$nome', '$nascimento', '$nome_imagem', '$telefone', '$email', '$cpf', '$funcao', '$data', '$peso', '$altura', '$icm', '$pressao', '$nivel_pressao', '$glicose', '$temperatura', '$estressado', '$triste', '$dor_dente', '$dor_cabeca', '$dor_corpo', '$conjuntivite', '$escoriacao', '$tratamento', '$antibio', '$tarjapreta', '$alcool', '$drogas', '$atendimento', '$status', '$btn_class')";
         $gravar = mysqli_query($conexao,$sql) or die("ocorreu um erro e seu registro não foi inserido");
 
         echo "Registro Cadastrado com Sucesso!";
