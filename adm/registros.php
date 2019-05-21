@@ -58,7 +58,10 @@ $total = mysqli_num_rows($sql);
                           <td><?=$linha['nome']?></td>
                           <td><?=$linha['telefone']?></td>
                           <td><?=$linha['data']?></td>
-                          <td><?=$linha['status']?></td>
+                          <td><button type="button" class="btn btn-xs <?=$linha['btn_class']?>">
+                              <?=$linha['status']?>
+                          </button>
+                        </td>
                           <td><?php echo "<a href='registro-detalhes.php?id=" . $linha['id'] . "'>Detalhes</a>"; ?></td>
                         </tr>
                         <?php
