@@ -5,17 +5,13 @@
                 <ul class="nav side-menu">
                   <li><a href="index.php"><i class="fa fa-dashboard"></i> Painel</a></li>
                   <li><a href="registros.php"><i class="fa fa-user"></i> Registros</a></li>
-                  <!-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Usuários <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.html">General Form</a></li>
-                      <li><a href="form_advanced.html">Advanced Components</a></li>
-                      <li><a href="form_validation.html">Form Validation</a></li>
-                      <li><a href="form_wizards.html">Form Wizard</a></li>
-                      <li><a href="form_upload.html">Form Upload</a></li>
-                      <li><a href="form_buttons.html">Form Buttons</a></li>
+                      <li><a href="javascript:;">Listar</a></li>
+                      <li><a href="cadastrar_usuarios.php">Cadastrar Usuários</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                  <!-- <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>
                       <li><a href="media_gallery.html">Media Gallery</a></li>
@@ -91,6 +87,7 @@
                     </ul>
                   </li>                  
                   <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li> -->
+                  <li><a href="functions/sair.php"><i class="fa fa-sign-out"></i> Sair</a></li>
                 </ul>
               </div>
 
@@ -111,12 +108,12 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="imagens/perfil/perfil.jpg" alt="">Administrador
+                    <img src="imagens/perfil/perfil.jpg" alt=""><?php echo $_SESSION['nome']?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Perfil</a></li>
-                    <li><a href="javascript:;"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
+                    <li><a href="functions/sair.php"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
                   </ul>
                 </li>
                 </ul>                

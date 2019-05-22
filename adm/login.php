@@ -30,16 +30,17 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form method="POST" action="functions/logar.php">
               <h1>Login</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Usuário" required="" />
+                <input type="text" class="form-control" name="email" placeholder="Email" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Senha" required="" />
+                <input type="password" class="form-control" name="senha" placeholder="Senha" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Entrar</a>
+                <input type="submit" class="btn btn-default submit" value="Entrar">
+                <!-- <a class="btn btn-default submit" href="index.html">Entrar</a> -->
                 <a class="reset_pass" href="#signup">Esqueci a senha?</a>
               </div>
 

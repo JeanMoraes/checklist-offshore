@@ -1,3 +1,13 @@
+<?php
+  session_start();
+
+  if(isset($_SESSION['nome'])){
+    //echo '<script>window.location = "../login.php"</script>';
+  }else{
+    echo '<script>window.location = "../adm/login.php"</script>';
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -40,7 +50,7 @@
               </div>
               <div class="profile_info">
                 <span>Bem Vindo,</span>
-                <h2>Administrador</h2>
+                <h2><?php echo $_SESSION['nome']?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
